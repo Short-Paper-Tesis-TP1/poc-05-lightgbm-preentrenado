@@ -1,0 +1,21 @@
+========================================================================
+PASO 1 | MODELO DE TERCEROS (20 columnas ajenas, guardado en archivo)
+  Columnas esperadas por el modelo: 20
+
+PASO 2 | NUESTROS DATOS: 9 variables del diccionario congelado
+
+PASO 3 | USAR EL MODELO DE TERCEROS CON NUESTRAS VARIABLES
+[LightGBM] [Fatal] The number of features in data (9) is not the same as it was in training data (20).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+  predict con 9 columnas                       RECHAZADO -> LightGBMError: The number of features in data (9) is not the same as it was in training data (20).
+[LightGBM] [Fatal] The number of features in data (9) is not the same as it was in training data (20).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+  init_model (continuar entrenamiento)         RECHAZADO -> LightGBMError: The number of features in data (9) is not the same as it was in training data (20).
+
+PASO 4 | RELLENAR HASTA 20 COLUMNAS PARA QUE EL MODELO ACEPTE LA ENTRADA
+  Con 9 columnas + 11 de relleno el modelo devuelve 500 probabilidades
+  (min 0.350, max 0.953), pero cada columna se lee como el
+  atributo ajeno de su misma posicion: el resultado no tiene significado.
+
+PASO 5 | Archivo generado: resultado_poc5.json
+========================================================================

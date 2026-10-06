@@ -1,0 +1,20 @@
+{
+  "poc_id": "PoC-05-LightGBM-preentrenado",
+  "pruebas": {
+    "predict con 9 columnas": {
+      "aceptado": false,
+      "error": "The number of features in data (9) is not the same as it was in training data (20)."
+    },
+    "init_model (continuar entrenamiento)": {
+      "aceptado": false,
+      "error": "The number of features in data (9) is not the same as it was in training data (20)."
+    }
+  },
+  "forzado": {
+    "filas": 500,
+    "min": 0.3501,
+    "max": 0.953,
+    "interpretacion": "sin significado: las columnas no corresponden a los atributos del modelo"
+  },
+  "conclusion": "Un LightGBM de terceros no puede reutilizarse: exige el mismo numero y significado de columnas."
+}
